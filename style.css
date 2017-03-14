@@ -1,0 +1,132 @@
+/*resetting all margins and paddings so everything stretches across the screen */
+body, html{
+    height:100%;
+    margin:0;
+    padding:0;
+}
+/* the top bar with logo, navbar icon, tagline, and headline */
+.topbar {
+    width : 100%;
+    height: 10%;
+    min-width:630px;
+    min-height:60px;
+    background-color: #d8d8d8;
+    margin: 0;
+}
+.topbar .topleft {
+    display:block;
+    float:left;
+    width: 23%;
+    padding: 1% 1% 0 1%;
+}
+.topbar .topmiddle {
+    display:block;
+    float:left;
+    text-align: center;
+    width: 50%;
+    margin: 0;
+}
+.topbar .topright{
+    display:block;
+    float:right;
+    padding: 1% 1% 0 1%;
+}
+/* The side navigation menu */
+.navbar {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8); /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.navbar a {
+    padding: 8px 8px 8px 32px;
+    margin: 10px auto;
+    text-decoration: none;
+    font-family: "Montserrat", "Lucida Grande", sans-serif;
+    font-size: 2em;
+    text-transform: uppercase;
+    color: white;
+    display: block;
+    transition: 0.3s
+}
+
+/* When you mouse over the navigation links, change their color */
+.navbar a:hover, .offcanvas a:focus{
+    color: #FFA9A9;
+}
+
+/* Position and style the close button (top right corner) */
+.navbar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 25px;
+    margin-left: 50px;
+}
+
+/* styling the headline */
+.topbar h1 {
+    font-family: "Montserrat", "Lucida Grande", sans-serif;
+    font-size: 2em;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+/* styling the tagline */
+.topbar h2 {
+    font-family: "Montserrat", "Lucida Grande", sans-serif;
+    font-size: 0.8em;
+    margin: 0;
+}
+
+/* everything in the main container below the top bar */
+.choicediv {
+    background-color: #ffffff;
+    min-height: 20%;
+    background-size: cover;
+    min-width:630px;
+
+}
+
+/* the choice buttons */
+.prop button{
+    float:left;
+    display: block;
+    text-transform: uppercase;
+    width:20%;
+    height: 5em;
+    margin: 2% 2.5%;
+    background-color: transparent;
+    border: 2px solid #FFA9A9;
+    border-radius:5px;
+    font-size: 1em;
+    font-family: "Montserrat", "Lucida Grande", sans-serif;
+    outline: none;
+}
+.prop button:hover{
+    background-color: #FFA9A9;
+    height:6em;
+    width: 25%;
+    margin: 0 0;
+    transition: 0.3s
+
+}
+/* styling the input search forms for genre and mood */
+.lookup {
+    margin: 2em;
+    display: none;
+}
+/* defining visibility for the genre search form
+#genre {
+    margin: 2em;
+    display: none;
+}
+*/

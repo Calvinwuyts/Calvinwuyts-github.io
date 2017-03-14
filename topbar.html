@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Kanit|Montserrat|Raleway" rel="stylesheet">
+    <script type="text/javascript" src="jquery-3.1.1.js"></script>
+    <script src="script.js"></script>
+        <title>Topbar test</title>
+</head>
+<body>
+
+<div class="topbar">
+    <div class="topleft"> <span id="navbaricon" onclick="toggleNav()"> <img src="images/navbar.png" alt="navbar icon by Madebyoliver on Flaticon">
+    </span> </div>
+    <div class="topmiddle"><h1>Tuberadio.live</h1>
+    <h2>Community-driven radio. Live, online, all the time.</h2></div>
+    <div class="topright"><img id=logo" src="images/logo.png" alt="logo image" width = "50px" height = "50px"></div>
+</div>
+
+<div id="mynavbar" class="navbar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">Home</a>
+    <a href="#">Genre</a>
+    <a href="#">Mood</a>
+    <a href="#">Random</a>
+    <a href="#">Top Stations</a>
+</div>
+
+<div class = "choicediv">
+    <div class="prop">
+    <button type="button" onclick="genrebutton()">Pick a <br/> <b>genre</b></button>
+    </div>
+    <div class="prop">
+    <button type="button" onclick="moodbutton()"> Match your <br/> <b>mood</b> </button>
+    </div>
+    <div class="prop">
+    <button type="button" onclick="randombutton()">Find a <br/> <b>random station</b> </button>
+    </div>
+    <div class="prop">
+    <button type="button" onclick="toplistbutton()">List the <br/> <b>top stations</b> </button>
+    </div>
+</div>
+
+<div class="inputdiv">
+    <div class="lookup" id="genre">
+        <form>
+            <label>
+                <input type="text" name="pickgenre" value="Enter a genre">
+            </label>
+        </form>
+    </div>
+    <div class="lookup" id="mood">
+        <form>
+            <label>
+                <input type="text" name="pickmood" value="Describe your mood">
+            </label>
+        </form>
+    </div>
+</div>
+</body>
+</html>
