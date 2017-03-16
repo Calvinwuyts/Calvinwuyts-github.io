@@ -161,6 +161,9 @@ body, html{
     color: rgba(255, 169, 169, 0.6);
 
 }
+.searchbutton {
+    display:none;
+}
 /* defining visibility for the genre search form
 #genre {
     margin: 2em;

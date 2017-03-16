@@ -63,25 +63,46 @@ function moodbutton(){
     }
 }
 
-/* submitting the genre and mood inputs on pressing enter
-
-
-
-$("#genreinput").keypress(function(event) {
-    if (event.which == 13) {
-        event.preventDefault();
-        genreresults();
-
+/* checking if the user has pressed enter in either the mood or genre search divs and making it click the hidden search button */
+function checkSubmit(e) {
+    if(e && e.keyCode == 13) {
+        e.preventDefault();
+        $(".searchbutton").click();
     }
-});
-
-$("#moodinput").keypress(function(event) {
-    if (event.which == 13) {
-        event.preventDefault();
-        $("#moodform").submit();
     }
-});
- */
+
+/* defining what the hidden search button does */
+function keyWordsearch(e){
+    console.log('keyword search initialized');
+    e.preventDefault();
+    gapi.client.setApiKey('AIzaSyDJgFr0e-Z5UF28f-klWqhPgS-k0efBFtU');
+    gapi.client.load('youtube', 'v3', function(){
+        makeRequest();
+    });
+}
+function makeRequest(){
+    console.log('making request');
+    var q = $('.searchbar').val();
+    console.log(q);
+    var request = gapi.client.youtube.search.list({
+        q: q,
+        part: 'snippet',
+        maxResults: 20
+    });
+    request.execute(function(response)  {
+        $('.results').empty();
+        var srchItems = response.result.items;
+        $.each(srchItems, function(index, item){
+            vidTitle = item.snippet.title;
+            vidThumburl =  item.snippet.thumbnails.default.url;
+            vidThumbimg = '<pre><img id="thumb" src="'+vidThumburl+'" alt="No  Image  Available." style="width:204px;height:128px"></pre>';
+
+            $('.results').append('<pre>' + vidTitle + vidThumbimg +   '</pre>');
+
+        })
+    })
+}
+
 /* loading the Youtube API  */
 
 function init() {
