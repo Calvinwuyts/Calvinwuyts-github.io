@@ -13,7 +13,7 @@ body, html{
     width : 100%;
     height: 10%;
     min-width:630px;
-    min-height:60px;
+    min-height:100px;
    /* background-color: #d8d8d8; */
     margin: 0;
 }
@@ -78,12 +78,19 @@ body, html{
 
 /* styling the headline */
 .topbar h1 {
-    font-family: "Indie Flower", "Lucida Grande", sans-serif;
+    font-family: "lost", "Indie Flower", "Lucida Grande", sans-serif;
     font-size: 2em;
-    text-transform: lowercase;
     margin: 0;
-}
+    text-transform: lowercase;
+    letter-spacing: 1px;
+    padding-top: 1em;
+    text-decoration: none;
+    color: black;
 
+}
+.topbar a{
+    text-decoration: none;
+}
 /* styling the tagline */
 .topbar h2 {
     font-family: "Montserrat", "Lucida Grande", sans-serif;
@@ -146,20 +153,19 @@ body, html{
 
 /* changing the color of the placeholder text for different browsers with webkit and moz */
 *::-webkit-input-placeholder {
-    color: rgba(255, 169, 169, 0.6);
+    color: rgba(0, 0, 0, 0.8);
 }
 *:-moz-placeholder {
     /* FF 4-18 */
-    color: rgba(255, 169, 169, 0.6);
+    color: rgba(0, 0, 0, 0.8);
 }
 *::-moz-placeholder {
     /* FF 19+ */
-    color: rgba(255, 169, 169, 0.6);
+    color: rgba(0, 0, 0, 0.8);
 }
 *:-ms-input-placeholder {
     /* IE 10+ */
-    color: rgba(255, 169, 169, 0.6);
-
+    color: rgba(0, 0, 0, 0.8);
 }
 .searchbutton {
     display:none;
