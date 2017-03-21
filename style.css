@@ -20,8 +20,11 @@ body, html{
 .topbar .topleft {
     display:block;
     float:left;
-    width: 23%;
-    padding: 1% 1% 0 1%;
+    width: 21%;
+    padding-top: 3%;
+    padding-right: 1%;
+    padding-left: 3%;
+    padding-bottom: 0;
 }
 .topbar .topmiddle {
     display:block;
@@ -34,6 +37,8 @@ body, html{
     display:block;
     float:right;
     padding: 1% 1% 0 1%;
+    width:23%;
+    height:100%;
 }
 /* The side navigation menu */
 .navbar {
@@ -86,18 +91,24 @@ body, html{
     padding-top: 1em;
     text-decoration: none;
     color: black;
-
+    transition: 0.5s;
 }
+
 .topbar a{
     text-decoration: none;
 }
-/* styling the tagline */
+.topbar h1:hover{
+    color: #FFA9A9;
+    transition: 0.3s;
+}
+
+/* styling the tagline
 .topbar h2 {
     font-family: "Montserrat", "Lucida Grande", sans-serif;
     font-size: 0.8em;
     margin: 0;
 }
-
+*/
 /* everything in the main container below the top bar */
 .choicediv {
    /* background-color: #ffffff; */
@@ -105,6 +116,7 @@ body, html{
     background-size: cover;
     min-width:630px;
     background-color: inherit;
+    margin-top:3%;
 
 }
 
@@ -115,20 +127,24 @@ body, html{
     text-transform: uppercase;
     width:20%;
     height: 5em;
-    margin: 2% 2.5%;
+    margin-top: 2%;
+    margin-right: 2.5%;
+    margin-left: 2.5%;
+    margin-bottom: 2%;
     background-color: transparent;
     border: 2px solid #FFA9A9;
     border-radius:5px;
     font-size: 1em;
     font-family: "Montserrat", "Lucida Grande", sans-serif;
     outline: none;
+    transition: 0.3s;
 }
 .prop button:hover{
     background-color: #FFA9A9;
     height:6em;
     width: 25%;
     margin: 0 0;
-    transition: 0.3s
+    transition: 0.3s;
 
 }
 /* styling the box around the input search forms for genre and mood */

@@ -24,7 +24,7 @@
 <div id="mynavbar" class="navbar">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="index.html">Home</a>
-    <a onclick="genrebutton();closeNav()">Genre</a>
+    <a href="index.html" onclick="genrebutton();closeNav()">Genre</a>
     <a onclick="moodbutton();closeNav()">Mood</a>
     <a onclick="randombutton();closeNav()">Random</a>
     <a onclick="toplistbutton();closeNav()">Top Stations</a>
@@ -55,7 +55,7 @@
         </form>
     </div>
     <div class="lookup" id="mood">
-        <form id="moodform">
+        <form id="moodform" action="results.html" method="get">
             <label>
                 <input id="moodinput" class="searchbar" type="text" name="pickmood" placeholder="Describe your mood">
                 <button class="searchbutton" id="moodsearchbutton"  onclick="moodkeyWordsearch(event)"></button>

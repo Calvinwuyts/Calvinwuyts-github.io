@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css" type="text/css"/>
     <link href="https://fonts.googleapis.com/css?family=Kanit|Montserrat|Raleway" rel="stylesheet">
     <script type="text/javascript" src="jquery-3.1.1.js"></script>
-    <script src="script.js"></script>
+    <script src="results.js"></script>
     <script src="https://apis.google.com/js/client.js?onload=init"></script>
     <style> @font-face { font-family: lost; src: url('images/lost.otf'); } </style>
 </head>
@@ -20,11 +20,11 @@
 
 <div id="mynavbar" class="navbar">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="#">Home</a>
-    <a href="#">Genre</a>
-    <a href="#">Mood</a>
-    <a href="#">Random</a>
-    <a href="#">Top Stations</a>
+    <a href="index.html">Home</a>
+    <a onclick="location.href='index.html?gotogenre=true'">Genre</a>
+    <a onclick="moodbutton();closeNav()">Mood</a>
+    <a onclick="randombutton();closeNav()">Random</a>
+    <a onclick="toplistbutton();closeNav()">Top Stations</a>
 </div>
 <div class="results">
 
