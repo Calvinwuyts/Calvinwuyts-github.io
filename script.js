@@ -63,26 +63,89 @@ function moodbutton(){
     }
 }
 
-/* checking if the user has pressed enter in either the mood or genre search divs and making it click the hidden search button */
-function checkSubmit(e) {
-    if(e && e.keyCode == 13) {
-        e.preventDefault();
-        $(".searchbutton").click();
-    }
-    }
-
-/* defining what the hidden search button does */
-function keyWordsearch(e){
-    console.log('keyword search initialized');
+/* defining what the hidden search button does
+function genrekeyWordsearch(e){
+    console.log('genre keyword search initialized');
     e.preventDefault();
+    gapi.client.setApiKey('AIzaSyDJgFr0e-Z5UF28f-klWqhPgS-k0efBFtU');
+    gapi.client.load('youtube', 'v3', function(){
+        genremakeRequest();
+    });
+}
+
+function moodkeyWordsearch(e){
+    console.log('mood keyword search initialized');
+    e.preventDefault();
+    gapi.client.setApiKey('AIzaSyDJgFr0e-Z5UF28f-klWqhPgS-k0efBFtU');
+    gapi.client.load('youtube', 'v3', function(){
+        moodmakeRequest();
+    });
+}
+*/
+
+/* after the keywords have been entered and the website has redirected to results.html, decode the html string to get
+ the input of the parameters. First find out if it's a genre of mood keyword search by seeing if the pickgenre parameter
+ or pickmood parameter is true. depending on that parameter, initialize genremakerequest of moodmakrequest.
+ */
+
+/* loading the Youtube API  */
+
+function init() {
+    gapi.client.setApiKey("AIzaSyDJgFr0e-Z5UF28f-klWqhPgS-k0efBFtU");
+    gapi.client.load("youtube", "v3", function () {
+    });
+    console.log('youtube API ready');
+    searchparaminit();
+}
+
+searchParams = new URLSearchParams(window.location.search);
+function searchparaminit(){
+    for (p in searchParams) {
+    if (searchParams.has("pickgenre") === true){
+        genremakeRequest(searchParams.get('pickgenre'));
+    } else if (searchParams.has("pickmood")===true){
+        moodmakeRequest(searchParams.get('pickmood'));
+    }
+    }
+}
+/* making the request for genre and mood keywords */
+function genremakeRequest(){
     gapi.client.setApiKey('AIzaSyDJgFr0e-Z5UF28f-klWqhPgS-k0efBFtU');
     gapi.client.load('youtube', 'v3', function(){
         makeRequest();
     });
 }
 function makeRequest(){
-    console.log('making request');
-    var q = $('.searchbar').val();
+    var q = searchParams.get('pickgenre')+'+24/7|radio';
+    console.log(q, jQuery.type(q));
+    var request = gapi.client.youtube.search.list({
+        q: q,
+        part: 'snippet',
+        maxResults: 15,
+        type: 'video',
+        eventType:'live',
+        topicId: '/m/04rlf',
+        videoEmbeddable: 'true',
+        videoSyndicated: 'true'
+
+    });
+    request.execute(function(response)  {
+        $('.results').empty();
+        var srchItems = response.result.items;
+        $.each(srchItems, function(index, item){
+            vidTitle = item.snippet.title;
+            vidThumburl =  item.snippet.thumbnails.medium.url;
+            vidThumbimg = '<div class="thumb"><img src="'+vidThumburl+'" alt="No  Image  Available." </div>';
+
+            $('.results').append('<div class="vidresult">' + vidTitle + vidThumbimg + '</div>');
+        })
+    })
+}
+
+
+function moodmakeRequest(moodkey){
+    console.log('making mood request');
+    var q = moodkey;
     console.log(q);
     var request = gapi.client.youtube.search.list({
         q: q,
@@ -101,18 +164,4 @@ function makeRequest(){
 
         })
     })
-}
-
-/* loading the Youtube API  */
-
-function init() {
-    gapi.client.setApiKey("AIzaSyDJgFr0e-Z5UF28f-klWqhPgS-k0efBFtU");
-    gapi.client.load("youtube", "v3", function () {
-    });
-    console.log('youtube API ready');
-}
-
-/* output the result of the genre form in the results div*/
-function genreresults(){
-    console.log("this executes.")
 }

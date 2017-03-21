@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css" type="text/css"/>
-    <link href="https://fonts.googleapis.com/css?family=Kanit|Montserrat|Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Indie+Flower" rel="stylesheet">
     <script type="text/javascript" src="jquery-3.1.1.js"></script>
     <script src="script.js"></script>
     <script src="https://apis.google.com/js/client.js?onload=init"></script>
+
     <title>tuberadio.live</title>
 </head>
 <body>
@@ -14,8 +15,7 @@
 <div class="topbar">
     <div class="topleft"> <span id="navbaricon" onclick="toggleNav()"> <img src="images/navbar.png" alt="navbar icon by Madebyoliver on Flaticon">
     </span> </div>
-    <div class="topmiddle"><h1>Tuberadio.live</h1>
-    <h2>Community-driven radio. Live, online, all the time.</h2></div>
+    <div class="topmiddle"><h1>Tuberadio.live</h1></div>
     <div class="topright"><img id=logo" src="images/logo.png" alt="logo image" width = "50px" height = "50px"></div>
 </div>
 
@@ -44,24 +44,22 @@
 </div>
 
 <div class="inputdiv">
-    <div class="lookup" id="genre" onKeyPress="checkSubmit(event)">
-        <form id="genreform">
+    <div class="lookup" id="genre">
+        <form id="genreform" action="results.html" method="get">
             <label>
                 <input id="genreinput" class="searchbar" type="text" name="pickgenre" placeholder="Enter a genre">
-                <button class="searchbutton"  onclick="keyWordsearch(event)"></button>
+                <button class="searchbutton" id="genresearchbutton"  onclick="genrekeyWordsearch(event)"></button>
             </label>
         </form>
     </div>
-    <div class="lookup" id="mood" onKeyPress="checkSubmit(event)">
+    <div class="lookup" id="mood">
         <form id="moodform">
             <label>
                 <input id="moodinput" class="searchbar" type="text" name="pickmood" placeholder="Describe your mood">
+                <button class="searchbutton" id="moodsearchbutton"  onclick="moodkeyWordsearch(event)"></button>
             </label>
         </form>
     </div>
-</div>
-<div class="results">
-<!-- this is where the results will show up. -->
 </div>
 </body>
 <!--

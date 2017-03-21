@@ -78,9 +78,9 @@ body, html{
 
 /* styling the headline */
 .topbar h1 {
-    font-family: "Montserrat", "Lucida Grande", sans-serif;
+    font-family: "Indie Flower", "Lucida Grande", sans-serif;
     font-size: 2em;
-    text-transform: uppercase;
+    text-transform: lowercase;
     margin: 0;
 }
 
@@ -164,12 +164,15 @@ body, html{
 .searchbutton {
     display:none;
 }
-/* defining visibility for the genre search form
-#genre {
-    margin: 2em;
-    display: none;
+
+.vidresult {
+    float:left;
+    text-align: center;
+    position:relative;
 }
-*/
+.vidresult .thumb{
+    padding: 0 5%;
+}
 .footer {
     float:bottom;
 
