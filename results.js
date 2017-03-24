@@ -61,11 +61,14 @@ function genremakeRequest(){
             $('.results').empty();
             var srchItems = response.result.items;
             $.each(srchItems, function(index, item){
+                vidId = item.id.videoId;
+                vidUrl = 'https://www.youtube.com/watch?v='+vidId;
                 vidTitle = item.snippet.title;
                 vidThumburl =  item.snippet.thumbnails.medium.url;
-                vidThumbimg = '<div class="thumb"><img src="'+vidThumburl+'" alt="No  Image  Available." </div>';
+                vidThumb = '<a href="'+vidUrl+'"><figure class="vidresult"><img src="'+vidThumburl+'" alt="No  Image  Available."><figcaption>'+vidTitle+'</figcaption></figure>';
 
-                $('.results').append('<div class="vidresult">' + vidTitle + vidThumbimg + '</div>');
+               /* $('.results').append('<div class="vidresult">' + vidTitle + vidThumbimg + '</div>'); */
+                $('.results').append(vidThumb);
             })
         })
     });
