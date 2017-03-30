@@ -66,8 +66,6 @@ function genremakeRequest(){
                 vidTitle = item.snippet.title;
                 vidThumburl =  item.snippet.thumbnails.medium.url;
                 vidThumb = '<a href="'+vidUrl+'"><figure class="vidresult"><img src="'+vidThumburl+'" alt="No  Image  Available."><figcaption>'+vidTitle+'</figcaption></figure>';
-
-               /* $('.results').append('<div class="vidresult">' + vidTitle + vidThumbimg + '</div>'); */
                 $('.results').append(vidThumb);
             })
         })

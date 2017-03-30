@@ -7,6 +7,7 @@ body, html{
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: cover;
+    overflow: hidden;
 }
 /* the top bar with logo, navbar icon, tagline, and headline */
 .topbar {
@@ -115,19 +116,17 @@ body, html{
     left: 8px;
 }
 .vidresult {
+    position:relative;
+    float:left;
     margin: 0 auto;
-    background-color: rgba(255, 255, 255, 0.6);
+    background: rgba(0,0,0,0);
 }
 /*every video result */
 .results a {
-    font-size: 16px;
     display: inline-block;
     margin-bottom: 8px;
     width: calc(50% - 4px);
     margin-right: 8px;
-    text-decoration: none;
-    color: black;
-    font-family: "Montserrat", "Lucida Grande", sans-serif;
 }
 .results a:nth-of-type(2n) {
     margin-right: 0;
@@ -162,4 +161,39 @@ body, html{
 .results img{
     width: 100%;
     height: 100%;
+    position: relative;
+    z-index:1;
+    vertical-align: top;
+}
+.results a figcaption {
+    position: absolute;
+    float:left;
+    z-index: 3;
+    margin: 0 auto;
+    top: 45%;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    font-family: "Montserrat", "Lucida Grande", sans-serif;
+    font-size: 16px;
+    opacity: 0;
+}
+.results a:hover figcaption {
+    opacity: 1;
+    transition: 1s;
+}
+.vidresult:after {
+    content: '\A';
+    position: absolute;
+    width: 100%; height:100%;
+    top:0; left:0;
+    background:rgba(0,0,0,0.6);
+    opacity: 0;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    z-index: 2;
+}
+.vidresult:hover:after {
+    opacity: 1;
 }
