@@ -49,7 +49,7 @@ function genremakeRequest(){
         var request = gapi.client.youtube.search.list({
             q: q,
             part: 'snippet',
-            maxResults: 15,
+            maxResults: 20,
             type: 'video',
             eventType:'live',
             topicId: '/m/04rlf',
@@ -81,7 +81,7 @@ function moodmakeRequest(){
         var request = gapi.client.youtube.search.list({
             q: q,
             part: 'snippet',
-            maxResults: 15,
+            maxResults: 20,
             type: 'video',
             eventType:'live',
             topicId: '/m/04rlf',
