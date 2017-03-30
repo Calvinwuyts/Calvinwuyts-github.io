@@ -65,7 +65,7 @@ function genremakeRequest(){
                 vidUrl = 'https://www.youtube.com/watch?v='+vidId;
                 vidTitle = item.snippet.title;
                 vidThumburl =  item.snippet.thumbnails.medium.url;
-                vidThumb = '<a href="'+vidUrl+'"><figure class="vidresult"><img src="'+vidThumburl+'" alt="No  Image  Available."><figcaption>'+vidTitle+'</figcaption></figure>';
+                vidThumb = '<a onclick="gotoplayer('+vidUrl+');"><figure class="vidresult"><img src="'+vidThumburl+'" alt="No  Image  Available."><figcaption>'+vidTitle+'</figcaption></figure>';
                 $('.results').append(vidThumb);
             })
         })
