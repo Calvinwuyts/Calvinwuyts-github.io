@@ -102,52 +102,64 @@ body, html{
     transition: 0.3s;
 }
 
-/* styling the tagline
-.topbar h2 {
-    font-family: "Montserrat", "Lucida Grande", sans-serif;
-    font-size: 0.8em;
-    margin: 0;
-}
-*/
-/* everything in the main container below the top bar */
-.choicediv {
-    /* background-color: #ffffff; */
-    min-height: 20%;
-    background-size: cover;
-    min-width:630px;
-    background-color: inherit;
-    margin-top:3%;
-
-}
-
-/* the container for the videos */
+/* the container for the videos. tutorial on nice image grids here: https://www.sitepoint.com/using-modern-css-to-build-a-responsive-image-grid/ */
 .results {
-    overflow: hidden;
+    min-width: 630px;
+    font-size: 0;
     display: flex;
     flex-wrap: wrap;
+    height:100%;
+    overflow: scroll;
+    position: absolute;
+    right: 8px;
+    left: 8px;
 }
-
-/*every video result */
 .vidresult {
-    width: 23%;
-    padding: 1%;
-    margin: 0;
-    float:left;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.6);
 }
-@media only screen and (max-width: 1080px) {
-    .vidresult { width: 20%; }
-    .hider { display: none; }
+/*every video result */
+.results a {
+    font-size: 16px;
+    display: inline-block;
+    margin-bottom: 8px;
+    width: calc(50% - 4px);
+    margin-right: 8px;
+    text-decoration: none;
+    color: black;
+    font-family: "Montserrat", "Lucida Grande", sans-serif;
 }
-@media only screen and (max-width: 800px) {
-    .vidresult { width: 45%; }
-    .hider { display: none; }
+.results a:nth-of-type(2n) {
+    margin-right: 0;
 }
 
-@media only screen and (max-width: 610px) {
-    .vidresult { width: 47%; }
-}
+@media screen and (min-width: 60em) {
+    .results a {
+        width: calc(25% - 6px);
+    }
 
-@media only screen and (max-width: 550px) {
-    .vidresult { width: 100%; }
-    .hider { display: block; }
+    .results a:nth-of-type(2n) {
+        margin-right: 8px;
+    }
+
+    .results a:nth-of-type(4n) {
+        margin-right: 0;
+    }
+}
+@media screen and (max-width: 60em) and (min-width: 40em) {
+    .results a {
+        width: calc(33.3% - 8px);
+    }
+
+    .results a:nth-of-type(2n) {
+        margin-right: 8px;
+    }
+
+    .results a:nth-of-type(4n) {
+        margin-right: 0;
+    }
+}
+.results img{
+    width: 100%;
+    height: 100%;
 }

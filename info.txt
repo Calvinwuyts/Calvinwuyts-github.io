@@ -1,2 +1,6 @@
 color palette: http://colorpalettes.net/color-palette-3170/
 
+todo:
+- truncate text
+- video player page
+- make result buttons animate on hover and overlay text with title of vid.
