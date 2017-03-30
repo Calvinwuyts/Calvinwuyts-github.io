@@ -1,7 +1,2 @@
 color palette: http://colorpalettes.net/color-palette-3170/
 
-
-todo:
-- logo left
--navbar right
-- let navbar slide from right side

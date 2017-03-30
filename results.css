@@ -14,7 +14,7 @@ body, html{
     height: 10%;
     min-width:630px;
     min-height:100px;
-   /* background-color: #d8d8d8; */
+    /* background-color: #d8d8d8; */
     margin: 0;
 }
 .topbar .topleft {
@@ -111,7 +111,7 @@ body, html{
 */
 /* everything in the main container below the top bar */
 .choicediv {
-   /* background-color: #ffffff; */
+    /* background-color: #ffffff; */
     min-height: 20%;
     background-size: cover;
     min-width:630px;
@@ -119,74 +119,35 @@ body, html{
     margin-top:3%;
 
 }
-/* the choice buttons */
-.prop button{
+
+/* the container for the videos */
+.results {
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*every video result */
+.vidresult {
+    width: 23%;
+    padding: 1%;
+    margin: 0;
     float:left;
-    display: block;
-    text-transform: uppercase;
-    width:20%;
-    height: 5em;
-    margin-top: 2%;
-    margin-right: 2.5%;
-    margin-left: 2.5%;
-    margin-bottom: 2%;
-    background-color: transparent;
-    border: 2px solid #FFA9A9;
-    border-radius:5px;
-    font-size: 1em;
-    font-family: "Montserrat", "Lucida Grande", sans-serif;
-    outline: none;
-    transition: 0.3s;
 }
-.prop button:hover{
-    background-color: #FFA9A9;
-    height:6em;
-    width: 25%;
-    margin: 0 0;
-    transition: 0.3s;
-
+@media only screen and (max-width: 1080px) {
+    .vidresult { width: 20%; }
+    .hider { display: none; }
 }
-/* styling the box around the input search forms for genre and mood */
-.lookup {
-    margin: 2em;
-    display: none;
-    border-radius: 5px;
-    border: 2px solid #FFA9A9;
-    width: 95%;
-    padding:1em 0;
-}
-/* styling the actual input form */
-.lookup input{
-    width:100%;
-    border-radius: 5px;
-    background-color: transparent;
-    border:none;
-    outline:none;
-    font-size: 2em;
-    font-family: "Montserrat", "Lucida Grande", sans-serif;
+@media only screen and (max-width: 800px) {
+    .vidresult { width: 45%; }
+    .hider { display: none; }
 }
 
-/* changing the color of the placeholder text for different browsers with webkit and moz */
-*::-webkit-input-placeholder {
-    color: rgba(0, 0, 0, 0.8);
-}
-*:-moz-placeholder {
-    /* FF 4-18 */
-    color: rgba(0, 0, 0, 0.8);
-}
-*::-moz-placeholder {
-    /* FF 19+ */
-    color: rgba(0, 0, 0, 0.8);
-}
-*:-ms-input-placeholder {
-    /* IE 10+ */
-    color: rgba(0, 0, 0, 0.8);
-}
-.searchbutton {
-    display:none;
+@media only screen and (max-width: 610px) {
+    .vidresult { width: 47%; }
 }
 
-.footer {
-    float:bottom;
-
+@media only screen and (max-width: 550px) {
+    .vidresult { width: 100%; }
+    .hider { display: block; }
 }
