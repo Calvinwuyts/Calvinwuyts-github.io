@@ -4,6 +4,9 @@
 $(function(){
     console.log("Jquery test");
 });
+
+/* functions for all pages */
+
 /* global variable for if the navbutton is clicked once or not */
 var toggle = false;
 /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
@@ -21,6 +24,9 @@ function toggleNav() {
 function closeNav() {
     document.getElementById("mynavbar").style.width = "0";
 }
+
+
+/* functions specific for homepage */
 
 /* initializing toggle variables telling us if the genre or mood buttons have been clicked */
 var genretoggle = false;
@@ -88,7 +94,7 @@ function moodkeyWordsearch(e){
  or pickmood parameter is true. depending on that parameter, initialize genremakerequest of moodmakrequest.
  */
 
-/* loading the Youtube API  */
+/* loading the Youtube API
 
 function init() {
     gapi.client.setApiKey("AIzaSyDJgFr0e-Z5UF28f-klWqhPgS-k0efBFtU");
@@ -96,3 +102,4 @@ function init() {
     });
     console.log('youtube API ready');
 }
+ */

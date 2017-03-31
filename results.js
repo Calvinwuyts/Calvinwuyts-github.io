@@ -1,26 +1,6 @@
 /**
  * Created by Calvin on 21/03/2017.
- */
-$(function(){
-    console.log("Jquery test");
-});
-
-/* navbar scripts */
-var toggle = false;
-function toggleNav() {
-    if (toggle == false){
-        toggle = true;
-        $('.navbar').css("width","250px");
-    }else {
-        $('.navbar').css("width","0");
-        toggle = false;
-    }
-}
-
-function closeNav() {
-    document.getElementById("mynavbar").style.width = "0";
-}
-
+*/
 /* initializing youtube API */
 function init() {
     gapi.client.setApiKey("AIzaSyDJgFr0e-Z5UF28f-klWqhPgS-k0efBFtU");
@@ -29,6 +9,8 @@ function init() {
     console.log('youtube API ready');
     searchparaminit();
 }
+
+/* defining whether search happened on genre or mood */
 
 searchParams = new URLSearchParams(window.location.search);
 function searchparaminit(){
@@ -40,6 +22,7 @@ function searchparaminit(){
         }
     }
 }
+
 /* making the request for genre and mood keywords */
 function genremakeRequest(){
     gapi.client.setApiKey('AIzaSyDJgFr0e-Z5UF28f-klWqhPgS-k0efBFtU');
@@ -65,7 +48,7 @@ function genremakeRequest(){
                 vidUrl = 'https://www.youtube.com/watch?v='+vidId;
                 vidTitle = item.snippet.title;
                 vidThumburl =  item.snippet.thumbnails.medium.url;
-                vidThumb = '<a onclick="gotoplayer('+vidUrl+');"><figure class="vidresult"><img src="'+vidThumburl+'" alt="No  Image  Available."><figcaption>'+vidTitle+'</figcaption></figure>';
+                vidThumb = '<a><figure class="vidresult"><img src="'+vidThumburl+'" alt="No  Image  Available."><figcaption id="'+vidId+'" onclick="clickvid(this);"><span>'+vidTitle+'</span></figcaption></figure>';
                 $('.results').append(vidThumb);
             })
         })
@@ -93,12 +76,16 @@ function moodmakeRequest(){
             $('.results').empty();
             var srchItems = response.result.items;
             $.each(srchItems, function(index, item){
+                vidId = item.id.videoId;
+                vidUrl = 'https://www.youtube.com/watch?v='+vidId;
                 vidTitle = item.snippet.title;
                 vidThumburl =  item.snippet.thumbnails.medium.url;
-                vidThumbimg = '<div class="thumb"><img src="'+vidThumburl+'" alt="No  Image  Available." </div>';
-
-                $('.results').append('<div class="vidresult">' + vidTitle + vidThumbimg + '</div>');
+                vidThumb = '<a><figure class="vidresult"><img src="'+vidThumburl+'" alt="No  Image  Available."><figcaption id="'+vidId+'" onclick="clickvid(this);"><span>'+vidTitle+'</span></figcaption></figure>';
+                $('.results').append(vidThumb);
             })
         })
     });
+}
+function clickvid(vidid){
+    window.location = "player.html?vidid="+vidid.id
 }

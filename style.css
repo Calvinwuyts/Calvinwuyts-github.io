@@ -7,7 +7,11 @@ body, html{
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: cover;
+    overflow: hidden;
 }
+
+/* styling for all pages */
+
 /* the top bar with logo, navbar icon, tagline, and headline */
 .topbar {
     width : 100%;
@@ -45,7 +49,7 @@ body, html{
     height: 100%; /* 100% Full-height */
     width: 0; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
+    z-index: 4; /* Stay on top */
     top: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.8); /* Black*/
@@ -81,6 +85,8 @@ body, html{
     margin-left: 50px;
 }
 
+/* styling for homepage*/
+
 /* styling the headline */
 .topbar h1 {
     font-family: "lost", "Indie Flower", "Lucida Grande", sans-serif;
@@ -102,13 +108,6 @@ body, html{
     transition: 0.3s;
 }
 
-/* styling the tagline
-.topbar h2 {
-    font-family: "Montserrat", "Lucida Grande", sans-serif;
-    font-size: 0.8em;
-    margin: 0;
-}
-*/
 /* everything in the main container below the top bar */
 .choicediv {
    /* background-color: #ffffff; */

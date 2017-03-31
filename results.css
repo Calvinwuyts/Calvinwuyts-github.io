@@ -1,109 +1,3 @@
-/*resetting all margins and paddings so everything stretches across the screen */
-body, html{
-    height:100%;
-    margin:0;
-    padding:0;
-    background-image: url("images/background.jpg");
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: cover;
-    overflow: hidden;
-}
-/* the top bar with logo, navbar icon, tagline, and headline */
-.topbar {
-    width : 100%;
-    height: 10%;
-    min-width:630px;
-    min-height:100px;
-    /* background-color: #d8d8d8; */
-    margin: 0;
-
-}
-.topbar .topleft {
-    display:block;
-    float:left;
-    width: 21%;
-    padding-top: 3%;
-    padding-right: 1%;
-    padding-left: 3%;
-    padding-bottom: 0;
-}
-.topbar .topmiddle {
-    display:block;
-    float:left;
-    text-align: center;
-    width: 50%;
-    margin: 0;
-}
-.topbar .topright{
-    display:block;
-    float:right;
-    padding: 1% 1% 0 1%;
-    width:23%;
-    height:100%;
-}
-/* The side navigation menu */
-.navbar {
-    height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 4; /* Stay on top */
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.8); /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 20px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-
-}
-
-/* The navigation menu links */
-.navbar a {
-    padding: 8px 8px 8px 32px;
-    margin: 10px auto;
-    text-decoration: none;
-    font-family: "Montserrat", "Lucida Grande", sans-serif;
-    font-size: 2em;
-    text-transform: uppercase;
-    color: white;
-    display: block;
-    transition: 0.3s
-}
-
-/* When you mouse over the navigation links, change their color */
-.navbar a:hover, .offcanvas a:focus{
-    color: #FFA9A9;
-}
-
-/* Position and style the close button (top right corner) */
-.navbar .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 25px;
-    margin-left: 50px;
-}
-
-/* styling the headline */
-.topbar h1 {
-    font-family: "lost", "Indie Flower", "Lucida Grande", sans-serif;
-    font-size: 2em;
-    margin: 0;
-    text-transform: lowercase;
-    letter-spacing: 1px;
-    padding-top: 1em;
-    text-decoration: none;
-    color: black;
-    transition: 0.5s;
-}
-
-.topbar a{
-    text-decoration: none;
-}
-.topbar h1:hover{
-    color: #FFA9A9;
-    transition: 0.3s;
-}
 
 /* the container for the videos. tutorial on nice image grids here: https://www.sitepoint.com/using-modern-css-to-build-a-responsive-image-grid/ */
 .results {
@@ -172,17 +66,27 @@ body, html{
 }
 .results a figcaption {
     position: absolute;
-    float:left;
+    height: 100%;
+    width:100%;
+    float: left;
     z-index: 3;
     margin: 0 auto;
-    top: 45%;
     text-align: center;
+    top:0;
     text-transform: uppercase;
+    vertical-align: middle;
     text-decoration: none;
     color: white;
     font-family: "Montserrat", "Lucida Grande", sans-serif;
     font-size: 16px;
     opacity: 0;
+}
+.results a figcaption span{
+    line-height: normal;
+    display: inline-block;
+    margin-top: 50px;
+    vertical-align: middle;
+
 }
 .results a:hover figcaption {
     opacity: 1;
