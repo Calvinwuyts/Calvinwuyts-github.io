@@ -1,14 +1,20 @@
 .player {
     width: 100%;
     height: 70%;
+    text-align: center;
 }
 .player #ytplayer {
-    float:left;
-    margin-left: 25%;
+    margin: 10% auto;
 }
 
 .recomm{
     width: 100%;
     height:20%;
     border: 1px solid black;
+}
+
+@media screen and (min-width: 1400px) {
+    .player {
+        margin-left: 25%;
+    }
 }
