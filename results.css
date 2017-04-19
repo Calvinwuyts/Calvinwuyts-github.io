@@ -1,6 +1,8 @@
 
 /* the container for the videos. tutorial on nice image grids here: https://www.sitepoint.com/using-modern-css-to-build-a-responsive-image-grid/ */
 .results {
+    margin-top:20px;
+    margin-left:10px;
     min-width: 630px;
     font-size: 0;
     display: flex;
@@ -44,7 +46,7 @@
         margin-right: 0;
     }
 }
-@media screen and (max-width: 60em) and (min-width: 40em) {
+@media screen and (max-width: 60em) and (min-width: 47em) {
     .results a {
         width: calc(33.3% - 8px);
     }

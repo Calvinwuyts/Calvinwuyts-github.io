@@ -69,6 +69,13 @@ function moodbutton(){
     }
 }
 
+function topsearch(){
+    window.location.href = "results.html?top";
+}
+
+function randomsearch(){
+    window.location.href = "results.html?random";
+}
 /* defining what the hidden search button does
 function genrekeyWordsearch(e){
     console.log('genre keyword search initialized');
