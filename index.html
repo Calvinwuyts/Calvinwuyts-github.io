@@ -27,8 +27,8 @@
     <a href="index.html">Home</a>
     <a href="index.html" onclick="genrebutton();closeNav()">Genre</a>
     <a onclick="moodbutton();closeNav()">Mood</a>
-    <a onclick="randombutton();closeNav()">Random</a>
-    <a onclick="toplistbutton();closeNav()">Top Stations</a>
+    <a onclick="randomsearch()">Random</a>
+    <a onclick="topsearch()">Top Stations</a>
 </div>
 
 <div class = "choicediv">
@@ -50,7 +50,7 @@
     <div class="lookup" id="genre">
         <form id="genreform" action="results.html" method="get">
             <label>
-                <input id="genreinput" class="searchbar" type="text" name="pickgenre" placeholder="Enter a genre">
+                <input id="genreinput" class="searchbar" type="text" name="pickgenre" placeholder="How about Chillhop, Trap, Nightcore, Pop, Lofi, House, or EDM?">
                 <button class="searchbutton" id="genresearchbutton"  onclick="genrekeyWordsearch(event)"></button>
             </label>
         </form>
@@ -58,7 +58,7 @@
     <div class="lookup" id="mood">
         <form id="moodform" action="results.html" method="get">
             <label>
-                <input id="moodinput" class="searchbar" type="text" name="pickmood" placeholder="Describe your mood">
+                <input id="moodinput" class="searchbar" type="text" name="pickmood" placeholder="For instance: Study, Chill, Dance, Moody, Happy, Sad, Energy...">
                 <button class="searchbutton" id="moodsearchbutton"  onclick="moodkeyWordsearch(event)"></button>
             </label>
         </form>
