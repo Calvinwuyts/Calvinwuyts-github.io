@@ -1,5 +1,9 @@
 color palette: http://colorpalettes.net/color-palette-3170/
 
 todo:
-- video player page
-- jquery from results page to vidplayer page
+- jquery for navbar
+- make it work in firefox! window.location.search works differently in firefox -_-
+- create a listener to see which browser is used. Create an alert for if the user isn't on firefox or chrome.
+- make it work in safari. it doesn't like urlsearchparams
+- create the featured search: have it look at a url in a text file that can be changed easily, so you don't have to update the whole .js file
+every time you make a new channel featured.

@@ -185,7 +185,9 @@ body, html{
     display:none;
 }
 
-.footer {
-    float:bottom;
-
+#poweredby , #poweredby img{
+    position: absolute;
+    bottom:5px;
+    right:5px;
+    width: 100px;
 }

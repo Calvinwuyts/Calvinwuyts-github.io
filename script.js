@@ -3,6 +3,15 @@
  */
 $(function(){
     console.log("Jquery test");
+    var searchParams = new URLSearchParams(window.location.search);
+    console.log('search params:'+searchParams);
+    if (searchParams.has("gotogenre") === true) {
+        console.log('gotogenre is in url');
+        genrebutton();
+    } else if(searchParams.has("gotomood") === true) {
+        console.log('gotomood is in url');
+        moodbutton();
+    }
 });
 
 /* functions for all pages */
@@ -73,8 +82,17 @@ function topsearch(){
     window.location.href = "results.html?top";
 }
 
-function randomsearch(){
-    window.location.href = "results.html?random";
+function featuredsearch(){
+    gapi.client.setApiKey("AIzaSyDJgFr0e-Z5UF28f-klWqhPgS-k0efBFtU");
+    gapi.client.load("youtube", "v3", function () {
+    });
+    console.log('youtube API ready');
+    $.get('featured.txt', function(response){
+        var vidid = response;
+        console.log(vidid);
+        window.location.href = "player.html?vidid="+vidid;
+    });
+
 }
 /* defining what the hidden search button does
 function genrekeyWordsearch(e){

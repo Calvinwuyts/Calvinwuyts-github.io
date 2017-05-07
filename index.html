@@ -27,7 +27,7 @@
     <a href="index.html">Home</a>
     <a href="index.html" onclick="genrebutton();closeNav()">Genre</a>
     <a onclick="moodbutton();closeNav()">Mood</a>
-    <a onclick="randomsearch()">Random</a>
+    <a onclick="featuredsearch()">Featured</a>
     <a onclick="topsearch()">Top Stations</a>
 </div>
 
@@ -38,8 +38,8 @@
     <div class="prop" id="mooddiv">
     <button type="button" onclick="moodbutton()"> Match your <br/> <b>mood</b> </button>
     </div>
-    <div class="prop" id="random">
-        <button type="submit" value="random" onclick="randomsearch()">Find a <br/> <b>random station</b> </button>
+    <div class="prop" id="featured">
+        <button type="submit" value="featured" onclick="featuredsearch()">Find a <br/> <b>featured station</b> </button>
     </div>
     <div class="prop" id="toplist">
     <button type="submit" value="top" onclick="topsearch()">List the <br/> <b>top stations</b> </button>
@@ -64,9 +64,7 @@
         </form>
     </div>
 </div>
+<div id="poweredby"><img src="images/poweredby.png">
+</div>
 </body>
-<!--
-<footer>
-    <p> Background image by Gratisography.</p>
-</footer>-->
 </html>
