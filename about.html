@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Youtune</title>
+
+    <!-- stylesheets-->
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Indie+Flower" rel="stylesheet">
+    <script type="text/javascript" src="jquery-3.1.1.js"></script>
+    <script src="script.js"></script>
+    <script src="https://apis.google.com/js/client.js?onload=init"></script>
+    <style> @font-face { font-family: lost; src: url('images/lost.otf'); } </style>
+
+</head>
+<body>
+<div class="topbar">
+    <div class="topleft"> <span id="navbaricon" onclick="toggleNav()"> <img src="images/navbar.png" alt="navbar icon by Madebyoliver on Flaticon">
+    </span> </div>
+    <div class="topmiddle"><a href="index.html"><h1>About</h1></a></div>
+    <div class="topright"></div>
+</div>
+
+<div id="mynavbar" class="navbar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html">Home</a>
+    <a href="index.html" onclick="genrebutton();closeNav()">Genre</a>
+    <a onclick="moodbutton();closeNav()">Mood</a>
+    <a onclick="featuredsearch()">Featured</a>
+    <a onclick="topsearch()">Top Stations</a>
+    <div id="bottomofnav">
+        <a href="about.html">About</a>
+    </div>
+</div>
+
+<div class="abouttext">
+    <p><u>Lately there have been a lot of live radio stations popping up on Youtube</u>, often run by a single person passionate about a certain genre.
+    Most of these radio stations just run on someone's laptop, 24/7.<br/><br/> <u>Small communities are created around these radio stations</u>: people come and listen
+    together and chat about all kinds of topics in the youtube live chatbox. Some stations grow exponentially until thousands of people are always
+    listening at any given time. Some stay small, unnoticed, and maybe see a listener or two once in a while. <br/> <br/>
+    <u>This website aims to make it easy and attractive to discover these live community radio stations</u> by filtering out all other Youtube content.
+    With youtune.live, all the other clutter is zoned out so you can focus on simply finding a radio station, putting it on, and then letting it
+    play in the background. <br> <br>
+    This website was developed by me, Jolan Wuyts. I love Youtube's live radio stations, and wanted to make a website that was dedicated to them.
+    The youtube radio stations are created by users, not companies. There are no ads, they're mostly not for profit, and they are places where
+    people of all background come to listen, chat, relax, work, be together.
+    </p>
+</div>
+</body>
+</html>

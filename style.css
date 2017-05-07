@@ -88,7 +88,7 @@ body, html{
 /* styling for homepage*/
 
 /* styling the headline */
-.topbar h1 {
+h1 {
     font-family: "lost", "Indie Flower", "Lucida Grande", sans-serif;
     font-size: 2em;
     margin: 0;
@@ -115,8 +115,16 @@ body, html{
     background-size: cover;
     min-width:630px;
     background-color: inherit;
-    margin-top:3%;
+   /* margin-top:3%; */
 
+}
+.tagline {
+    margin: 0 auto;
+    text-align:center;
+    width:50%;
+    text-decoration: none;
+    font-family: "Montserrat", "Lucida Grande", sans-serif;
+    font-size: 1em;
 }
 /* the choice buttons */
 .prop button{
@@ -172,14 +180,17 @@ body, html{
 *:-moz-placeholder {
     /* FF 4-18 */
     color: rgba(0, 0, 0, 0.8);
+    opacity:1;
 }
 *::-moz-placeholder {
     /* FF 19+ */
     color: rgba(0, 0, 0, 0.8);
+    opacity: 1;
 }
 *:-ms-input-placeholder {
     /* IE 10+ */
     color: rgba(0, 0, 0, 0.8);
+    opacity: 1;
 }
 .searchbutton {
     display:none;
@@ -190,4 +201,23 @@ body, html{
     bottom:5px;
     right:5px;
     width: 100px;
+}
+
+#bottomofnav a {
+    position: absolute;
+    bottom: 50px;
+}
+
+.abouttext{
+    width:70%;
+    margin: 0 auto;
+    text-align: center;
+    text-decoration: none;
+    font-family: "Montserrat", "Lucida Grande", sans-serif;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 2px solid #FFA9A9;
+    background-color:rgba(255, 255, 255, 0.6);
+    overflow:visible;
+    padding:20px;
 }

@@ -15,6 +15,7 @@ function init() {
 searchParams = new URLSearchParams(window.location.search);
 function searchparaminit() {
     console.log('started search fn');
+    console.log(searchParams.entries());
     for (p in searchParams) {
         if (searchParams.has("pickgenre") === true) {
             genremakeRequest(searchParams.get('pickgenre'));
