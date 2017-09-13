@@ -171,25 +171,26 @@ h1 {
     outline:none;
     font-size: 2em;
     font-family: "Montserrat", "Lucida Grande", sans-serif;
+    text-align: center;
 }
 
 /* changing the color of the placeholder text for different browsers with webkit and moz */
 *::-webkit-input-placeholder {
-    color: rgba(0, 0, 0, 0.8);
+    color: rgba(0, 0, 0, 0.6);
 }
 *:-moz-placeholder {
     /* FF 4-18 */
-    color: rgba(0, 0, 0, 0.8);
+    color: rgba(0, 0, 0, 0.6);
     opacity:1;
 }
 *::-moz-placeholder {
     /* FF 19+ */
-    color: rgba(0, 0, 0, 0.8);
+    color: rgba(0, 0, 0, 0.6);
     opacity: 1;
 }
 *:-ms-input-placeholder {
     /* IE 10+ */
-    color: rgba(0, 0, 0, 0.8);
+    color: rgba(0, 0, 0, 0.6);
     opacity: 1;
 }
 .searchbutton {
