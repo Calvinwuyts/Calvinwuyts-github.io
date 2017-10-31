@@ -7,9 +7,12 @@
     <!-- stylesheets-->
     <link rel="stylesheet" href="style.css" type="text/css"/>
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Indie+Flower" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script type="text/javascript" src="jquery-3.1.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="script.js"></script>
     <script src="https://apis.google.com/js/client.js?onload=init"></script>
+
     <style> @font-face { font-family: lost; src: url('images/lost.otf'); } </style>
 
 </head>
@@ -51,18 +54,18 @@
 </div>
 
 <div class="inputdiv">
-    <div class="lookup" id="genre">
+    <div class="lookup ui-widget" id="genre">
         <form id="genreform" action="results.html" method="get">
             <label>
-                <input id="genreinput" class="searchbar" type="text" name="pickgenre" placeholder="How about Chillhop, Trap, Nightcore, Pop, Lofi, House, or EDM?">
+                <input id="genreinput" class="searchbar" type="text" name="pickgenre" placeholder="Start typing to find your genre">
                 <button class="searchbutton" id="genresearchbutton"  onclick="genrekeyWordsearch(event)"></button>
             </label>
         </form>
     </div>
-    <div class="lookup" id="mood">
+    <div class="lookup ui-widget" id="mood">
         <form id="moodform" action="results.html" method="get">
             <label>
-                <input id="moodinput" class="searchbar" type="text" name="pickmood" placeholder="For instance: Study, Chill, Dance, Moody, Happy, Sad, Energy...">
+                <input id="moodinput" class="searchbar" type="text" name="pickmood" placeholder="Start typing in your mood">
                 <button class="searchbutton" id="moodsearchbutton"  onclick="moodkeyWordsearch(event)"></button>
             </label>
         </form>

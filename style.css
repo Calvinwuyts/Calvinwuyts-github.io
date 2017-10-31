@@ -169,8 +169,8 @@ h1 {
     background-color: transparent;
     border:none;
     outline:none;
-    font-size: 2em;
-    font-family: "Montserrat", "Lucida Grande", sans-serif;
+    font-size: 2em !important;
+    font-family: "Montserrat", "Lucida Grande", sans-serif !important;
     text-align: center;
 }
 
@@ -221,4 +221,16 @@ h1 {
     background-color:rgba(255, 255, 255, 0.6);
     overflow:visible;
     padding:20px;
+}
+
+.ui-menu {
+    border-radius: 5px;
+    border: 2px solid #FFA9A9;
+    background-color:rgba(255, 255, 255, 0.6);
+}
+
+.ui-menu-item {
+    font-size: 1.5em !important;
+    font-family: "Montserrat", "Lucida Grande", sans-serif !important;
+    text-align: center;
 }
