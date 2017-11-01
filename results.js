@@ -36,7 +36,7 @@ function searchparaminit() {
         console.log('started make request');
         gapi.client.setApiKey('AIzaSyDJgFr0e-Z5UF28f-klWqhPgS-k0efBFtU');
         gapi.client.load('youtube', 'v3', function () {
-            var q = searchParams.get('pickgenre') + '+24/7|radio';
+            var q = searchParams.get('pickgenre') + '+radio';
             console.log(q, jQuery.type(q));
             var request = gapi.client.youtube.search.list({
                 q: q,
@@ -69,7 +69,7 @@ function searchparaminit() {
     function moodmakeRequest() {
         gapi.client.setApiKey('AIzaSyDJgFr0e-Z5UF28f-klWqhPgS-k0efBFtU');
         gapi.client.load('youtube', 'v3', function () {
-            var q = searchParams.get('pickmood') + '+24/7|radio';
+            var q = searchParams.get('pickmood') + '+radio';
             console.log(q, jQuery.type(q));
             var request = gapi.client.youtube.search.list({
                 q: q,
@@ -100,7 +100,7 @@ function searchparaminit() {
     function toprequest() {
         gapi.client.setApiKey('AIzaSyDJgFr0e-Z5UF28f-klWqhPgS-k0efBFtU');
         gapi.client.load('youtube', 'v3', function () {
-            var q = '24/7|radio';
+            var q = 'radio';
             console.log(q, jQuery.type(q));
             var request = gapi.client.youtube.search.list({
                 q: q,
